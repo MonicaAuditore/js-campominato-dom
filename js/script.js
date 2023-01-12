@@ -73,6 +73,10 @@ const grigliaUno = document.getElementById("grigliaUno");
 const grigliaDue = document.getElementById("grigliaDue");
 const grigliaTre = document.getElementById("grigliaTre");
 
+const messaggio = document.querySelector(".messaggioPunteggio");
+const perso = document.querySelector(".perso");
+const vinto = document.querySelector(".vinto");
+
 let count = 0;
 
 // creo le celle con classe cella all'interno della griglia;
@@ -85,7 +89,7 @@ for (let i = 1; i <= 100; i++) {
   div.classList.add("cella");
   grigliaUno.append(div);
 
-  const punteggio = document.getElementById("count");
+  const punteggio = document.querySelector(".count");
   let bombaEsplosa;
 
   // coloro di azzurro o di rosso la casella cliccata;
@@ -106,12 +110,13 @@ for (let i = 1; i <= 100; i++) {
     }
 
     if (bombaEsplosa === true) {
-      // punteggio.innerHTML += "a";
-      console.log("perso");
       grigliaUno.classList.add("stopClick");
-    } else if (bombaEsplosa === false) {
-      // punteggio.innerHTML += "b";
-      console.log("vinto");
+      messaggio.classList.remove("hidden");
+      vinto.classList.add("hidden");
+    } else if (bombaEsplosa === false && count == 84) {
+      grigliaUno.classList.add("stopClick");
+      messaggio.classList.remove("hidden");
+      perso.classList.add("hidden");
     }
 
     // stampo in console il numero che è stato cliccato.
@@ -120,7 +125,7 @@ for (let i = 1; i <= 100; i++) {
 }
 
 console.log(
-  "-------------------------------------------------------------------"
+  "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 );
 
 // creo GRIGLIA 2;
