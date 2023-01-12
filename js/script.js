@@ -39,6 +39,7 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 
 10. genero 16 numeri casuali da 1 a 100;
 11. li inserisco in un array, se nell'array in numero è già presente ne genero uno nuovo altrimenti lo inserisco;
+
 12. se il numero su cui clicca l'utente è uguale a un numero dentro l'array di bombe, allora è su una bomba, la casella si colora di rosso, perde e finisce il gioco;
 altrimenti la casella si colora di azzurro e l'utente può continuare a cliccare su altre caselle;
 13. se il giocatore clicca su 100 caselle - 16(bombe) = 84 senza trovare la bomba, VINCE;
