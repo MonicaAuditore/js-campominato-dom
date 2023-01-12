@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link font awasome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- fine link font awasome -->
+    <!-- link font google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fine link font google -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Space Adventure</title>
+  </head>
+  <body>
+    <header>
+      <div class="intestazione container">
+        <div class="title">
+          <div class="titolo"><h1>Space Adventure</h1></div>
+          <div class="logo"><img alt="logo" src="img/naveSpaziale.png" /></div>
+        </div>
+        <div class="sceltaLivello">
+          <h2>Difficulty:</h2>
+          <select name="livelli" id="levels">
+            <option value="e">Easy</option>
+            <option value="m">Medium</option>
+            <option value="h">Hard</option>
+          </select>
+
+          <img class="btn" alt="start" src="img/start.png" />
+
+          <img class="reset" alt="reset" src="img/reset.png" />
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div id="grigliaUno" class="griglia hidden"></div>
+      <div id="grigliaDue" class="griglia hidden"></div>
+      <div id="grigliaTre" class="griglia hidden"></div>
+    </main>
+    <section class="risultato">
+      <div class="messaggioPunteggio hidden">
+        <h3 class="perso">
+          Hai perso! Il tuo punteggio è <span class="count">0</span>
+        </h3>
+        <h3 class="vinto">Hai vinto!</h3>
+      </div>
+    </section>
+    <footer>
+      <div class="footer container">
+        <div class="dati">
+          <h5>
+            Made with <i class="fa-solid fa-heart"></i> by Monica Auditore
+          </h5>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>

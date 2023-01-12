@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Audiowide", cursive;
+}
+
+header {
+  width: 100%;
+  height: 10vh;
+  background-color: #210955;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 52px;
+  margin-right: 17px;
+  color: #efe9f5;
+}
+
+h2 {
+  color: #efe9f5;
+  margin-right: 10px;
+}
+
+h3 {
+  letter-spacing: 2px;
+}
+
+h5 {
+  font-weight: 400;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.intestazione {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 52px;
+  margin-right: 10px;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.sceltaLivello {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#levels {
+  padding-right: 35px;
+}
+
+.btn {
+  margin-left: 35px;
+  width: 108px;
+}
+
+.reset {
+  margin-left: 5px;
+  width: 108px;
+}
+
+main {
+  height: 80vh;
+  width: 100%;
+
+  background-image: url(../img/2211.w026.n002.2790B.p1.2790.jpg);
+  object-fit: cover;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.risultato {
+  text-align: center;
+  background-color: #250d63;
+  color: white;
+  padding: 8px;
+  height: 5vh;
+}
+
+.griglia {
+  width: 72vh;
+  height: 72vh;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hidden {
+  display: none;
+}
+
+.stopClick {
+  pointer-events: none;
+}
+
+.cella {
+  background-color: #1f004370;
+  width: calc((100% / 10) - 4px);
+  height: calc((100% / 10) - 4px);
+  border: 1px solid #7e65ebcf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  margin: 2px;
+  color: #c9b3da;
+}
+
+.cella-medium {
+  background-color: #1f004370;
+  width: calc((100% / 9));
+  height: calc(100% / 9);
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cella-hard {
+  background-color: #1f004370;
+  width: calc(100% / 7);
+  height: calc(100% / 7);
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cellaCliccata {
+  background-size: 42px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../img/star.png);
+}
+
+.cellaCliccataBomba {
+  background-image: url(../img/meteoriteUno.png);
+  background-size: cover;
+
+  background-color: #2d125c;
+  /* background-image: linear-gradient(
+    to right top,
+    #4d1883,
+    #3d1b73,
+    #2f1b62,
+    #241a51,
+    #1b173f
+  ); */
+}
+
+footer {
+  width: 100%;
+  height: 5vh;
+  position: fixed;
+  background-color: #1f054e;
+  color: #9993a5;
+}
+
+.dati {
+  line-height: 50px;
+}
+
+@media only screen and (max-width: 689px) {
+  h1 {
+    font-size: 25px;
+  }
+
+  .btn {
+    margin-left: 0px;
+  }
+
+  .sceltaLivello {
+    text-align: right;
+  }
+
+  #levels {
+    padding-right: 0px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  h1 {
+    font-size: 19px;
+  }
+}
