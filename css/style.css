@@ -111,6 +111,10 @@ main {
   background-color: rgb(67, 230, 203);
 }
 
+.cellaCliccataBomba {
+  background-color: rgb(216, 0, 0);
+}
+
 footer {
   width: 100%;
   height: 5vh;
