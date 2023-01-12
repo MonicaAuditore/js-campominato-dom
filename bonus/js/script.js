@@ -234,6 +234,7 @@ bottone.addEventListener("click", function () {
   }
 });
 
+// Bottone reset
 const reset = document.querySelector(".reset");
 reset.addEventListener("click", function () {
   location.reload();
