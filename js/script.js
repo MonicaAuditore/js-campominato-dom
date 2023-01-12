@@ -42,6 +42,7 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 
 12. se il numero su cui clicca l'utente è uguale a un numero dentro l'array di bombe, allora è su una bomba, la casella si colora di rosso, perde e finisce il gioco;
 altrimenti la casella si colora di azzurro e l'utente può continuare a cliccare su altre caselle;
+
 13. se il giocatore clicca su 100 caselle - 16(bombe) = 84 senza trovare la bomba, VINCE;
 14. alla fine viene emesso il punteggio che è il n° di volte che l'utente ha cliccato su una cella senza far esplodere la bomba.
 */
@@ -84,16 +85,59 @@ for (let i = 1; i <= 100; i++) {
 
   // coloro di azzurro la casella cliccata;
   div.addEventListener("click", function () {
-    if (this.classList.contains("cellaCliccata")) {
-      this.classList.remove("cellaCliccata");
-    } else {
-      this.classList.add("cellaCliccata");
+    for (let b = 0; b < bombeArray.length; b++) {
+      if (bombeArray.includes(i)) {
+        div.classList.add("cellaCliccataBomba");
+      } else {
+        div.classList.add("cellaCliccata");
+      }
     }
+
+    // if (this.classList.contains("cellaCliccata")) {
+    //   this.classList.remove("cellaCliccata");
+    // } else {
+    //   this.classList.add("cellaCliccata");
+    // }
 
     // stampo in console il numero che è stato cliccato.
     console.log("Cella cliccata numero:", i);
   });
 }
+
+console.log(
+  "-------------------------------------------------------------------"
+);
+
+// const bottone = document.querySelector(".btn");
+// const grigliaUno = document.getElementById("grigliaUno");
+// const grigliaDue = document.getElementById("grigliaDue");
+// const grigliaTre = document.getElementById("grigliaTre");
+
+// // creo le celle con classe cella all'interno della griglia;
+// for (let i = 1; i <= 100; i++) {
+//   console.log(i);
+//   let div = document.createElement("div");
+
+//   // assegno un numero alle celle;
+//   div.innerHTML += i;
+//   div.classList.add("cella");
+//   grigliaUno.append(div);
+
+//   // coloro di azzurro la casella cliccata;
+//   div.addEventListener("click", function () {
+//     if (this.classList.contains("cellaCliccata")) {
+//       this.classList.remove("cellaCliccata");
+//     } else {
+//       this.classList.add("cellaCliccata");
+//     }
+
+//     // stampo in console il numero che è stato cliccato.
+//     console.log("Cella cliccata numero:", i);
+//   });
+// }
+console.log(
+  "-------------------------------------------------------------------"
+);
 
 // creo GRIGLIA 2;
 // creo le celle con classe cella all'interno della griglia;
