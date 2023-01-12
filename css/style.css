@@ -55,13 +55,19 @@ header {
 }
 
 main {
-  height: 85vh;
+  height: 80vh;
   width: 100%;
 
   background-color: aquamarine;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.risultato {
+  text-align: center;
+  background-color: aquamarine;
+  height: 5vh;
 }
 
 .griglia {

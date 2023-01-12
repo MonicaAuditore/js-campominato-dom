@@ -83,58 +83,36 @@ for (let i = 1; i <= 100; i++) {
   div.classList.add("cella");
   grigliaUno.append(div);
 
-  // coloro di azzurro la casella cliccata;
+  const punteggio = document.querySelector(".messaggioPunteggio");
+  let bombaEsplosa;
+
+  // coloro di azzurro o di rosso la casella cliccata;
   div.addEventListener("click", function () {
     for (let b = 0; b < bombeArray.length; b++) {
       if (bombeArray.includes(i)) {
         div.classList.add("cellaCliccataBomba");
+        bombaEsplosa = true;
+        console.log("bombaEsplosa", bombaEsplosa);
       } else {
         div.classList.add("cellaCliccata");
+        bombaEsplosa = false;
+        console.log("bombaEsplosa", bombaEsplosa);
       }
     }
 
-    // if (this.classList.contains("cellaCliccata")) {
-    //   this.classList.remove("cellaCliccata");
-    // } else {
-    //   this.classList.add("cellaCliccata");
-    // }
+    if (bombaEsplosa === true) {
+      punteggio.innerHTML += `<h3>Il tuo punteggio è x</h3>`;
+      console.log("perso");
+    } else if (bombaEsplosa === false) {
+      punteggio.innerHTML += `<h3>Il tuo punteggio è y</h3>`;
+      console.log("vinto");
+    }
 
     // stampo in console il numero che è stato cliccato.
     console.log("Cella cliccata numero:", i);
   });
 }
 
-console.log(
-  "-------------------------------------------------------------------"
-);
-
-// const bottone = document.querySelector(".btn");
-// const grigliaUno = document.getElementById("grigliaUno");
-// const grigliaDue = document.getElementById("grigliaDue");
-// const grigliaTre = document.getElementById("grigliaTre");
-
-// // creo le celle con classe cella all'interno della griglia;
-// for (let i = 1; i <= 100; i++) {
-//   console.log(i);
-//   let div = document.createElement("div");
-
-//   // assegno un numero alle celle;
-//   div.innerHTML += i;
-//   div.classList.add("cella");
-//   grigliaUno.append(div);
-
-//   // coloro di azzurro la casella cliccata;
-//   div.addEventListener("click", function () {
-//     if (this.classList.contains("cellaCliccata")) {
-//       this.classList.remove("cellaCliccata");
-//     } else {
-//       this.classList.add("cellaCliccata");
-//     }
-
-//     // stampo in console il numero che è stato cliccato.
-//     console.log("Cella cliccata numero:", i);
-//   });
-// }
 console.log(
   "-------------------------------------------------------------------"
 );
@@ -181,6 +159,7 @@ for (let i = 1; i <= 49; i++) {
     } else {
       this.classList.add("cellaCliccata");
     }
+
     // stampo in console il numero che è stato cliccato.
     console.log("Cella cliccata numero:", i);
   });
