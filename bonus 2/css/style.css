@@ -214,13 +214,15 @@ footer {
   h1 {
     font-size: 27px;
   }
-}
-
-@media only screen and (max-width: 768px) {
   h2 {
     font-size: 20px;
   }
+  .dati {
+    text-align: center;
+  }
+}
 
+@media only screen and (max-width: 768px) {
   .btn,
   .reset {
     width: 82px;
@@ -234,7 +236,44 @@ footer {
   .levels {
     flex-direction: column;
   }
+
+  main {
+    background-position: -107px;
+  }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 568px) {
+  h1 {
+    margin-right: 0;
+  }
+
+  h2 {
+    font-size: 16px;
+    margin-right: 0;
+  }
+
+  header {
+    height: 15vh;
+  }
+
+  main {
+    height: 75vh;
+  }
+
+  .bottoniStartReset {
+    flex-direction: column;
+  }
+
+  #levels {
+    margin-right: 0px;
+  }
+
+  .btn,
+  .reset {
+    width: 100px;
+    margin-left: 10px;
+  }
+  main {
+    background-position: -435px;
+  }
 }
