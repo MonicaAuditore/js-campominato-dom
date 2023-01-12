@@ -33,6 +33,14 @@ for (let b = 0; b < 16; b++) {
 console.log("BombeArrayUno", bombeArrayUno);
 
 const bottone = document.querySelector(".btn");
+
+// suono bottoni start e reset
+const x = document.getElementById("myAudio");
+function playAudio() {
+  x.play();
+}
+// fine suono bottoni start e reset
+
 const grigliaUno = document.getElementById("grigliaUno");
 const grigliaDue = document.getElementById("grigliaDue");
 const grigliaTre = document.getElementById("grigliaTre");

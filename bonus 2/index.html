@@ -25,6 +25,16 @@
     <title>Space Adventure</title>
   </head>
   <body>
+    <audio id="myAudio">
+      <source
+        src="sound/466867__mikee63__blaster-shot-single-5.ogg"
+        type="audio/ogg"
+      />
+      <source
+        src="sound/466867__mikee63__blaster-shot-single-5.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
     <header>
       <div class="intestazione container">
         <div class="title">
@@ -45,7 +55,12 @@
           </select>
         </div>
         <div class="bottoniStartReset">
-          <img class="btn" alt="start" src="img/start.png" />
+          <img
+            onclick="playAudio()"
+            class="btn start"
+            alt="start"
+            src="img/start.png"
+          />
           <img class="reset" alt="reset" src="img/reset.png" />
         </div>
       </div>
