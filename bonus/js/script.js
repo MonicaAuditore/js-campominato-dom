@@ -1,36 +1,4 @@
 /*
-I PARTE
-
-1. creo le celle con classe cella all'interno della griglia;
-2. al click del bottone "play" rendo visibile la griglia;
-3. assegno un numero alle celle;
-4. coloro di azzurro la casella cliccata;
-5. stampo in console il numero che è stato cliccato.
-
-6. aggiungo la select in html;
-7. in css creo altre due classi per cella-medium e cella-hard;
-8. creo le altre due griglie;
-9. al click, in base alla difficoltà scelta, mostro una griglia diversa;
-
-----------------------------------------------------------------------------------------------------
-
-II PARTE
-
-Consegna
-Copiamo la griglia fatta ieri nella nuova repo e aggiungiamo la logica del gioco (attenzione: 
-  non bisogna copiare tutta la cartella dell'esercizio ma solo l'index.html, 
-  e le cartelle js/ css/ con i relativi script e fogli di stile, per evitare problemi con l'inizializzazione di git).
-Il computer deve generare 16 numeri casuali nello stesso range della difficoltà prescelta: le bombe. 
-Attenzione: nella stessa cella può essere posizionata al massimo una bomba, perciò nell'array delle bombe non potranno esserci due numeri uguali.
-In seguito l'utente clicca su una cella: se il numero è presente nella lista dei numeri generati 
-- abbiamo calpestato una bomba 
-- la cella si colora di rosso e la partita termina. 
-Altrimenti la cella cliccata si colora di azzurro e l'utente può continuare a cliccare sulle altre celle.
-La partita termina quando il giocatore clicca su una bomba o quando raggiunge il numero massimo possibile di numeri consentiti 
-(ovvero quando ha rivelato tutte le celle che non sono bombe).
-Al termine della partita il software deve comunicare il punteggio, 
-cioè il numero di volte che l'utente ha cliccato su una cella che non era una bomba.
-
 BONUS:
 Aggiungere una select accanto al bottone di generazione, che fornisca una scelta tra tre diversi livelli di difficoltà:
 - difficoltà 1 ⇒ 100 caselle, con un numero compreso tra 1 e 100, divise in 10 caselle per 10 righe;
@@ -135,12 +103,35 @@ for (let i = 1; i <= 81; i++) {
   div.classList.add("cella-medium");
   grigliaDue.append(div);
 
-  // coloro di azzurro la casella cliccata;
+  const punteggio = document.querySelector(".count");
+  let bombaEsplosa;
+
+  // coloro di azzurro o di rosso la casella cliccata;
   div.addEventListener("click", function () {
-    if (this.classList.contains("cellaCliccata")) {
-      this.classList.remove("cellaCliccata");
-    } else {
-      this.classList.add("cellaCliccata");
+    count++;
+    punteggio.innerHTML = count;
+
+    for (let b = 0; b < bombeArray.length; b++) {
+      if (bombeArray.includes(i)) {
+        div.classList.add("cellaCliccataBomba");
+
+        bombaEsplosa = true;
+        console.log("bombaEsplosa", bombaEsplosa);
+      } else {
+        div.classList.add("cellaCliccata");
+        bombaEsplosa = false;
+        console.log("bombaEsplosa", bombaEsplosa);
+      }
+    }
+
+    if (bombaEsplosa === true) {
+      grigliaDue.classList.add("stopClick");
+      messaggio.classList.remove("hidden");
+      vinto.classList.add("hidden");
+    } else if (bombaEsplosa === false && count == 84) {
+      grigliaDue.classList.add("stopClick");
+      messaggio.classList.remove("hidden");
+      perso.classList.add("hidden");
     }
 
     // stampo in console il numero che è stato cliccato.
