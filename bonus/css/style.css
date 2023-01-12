@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 10vh;
+  background-color: rgb(255, 255, 255);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.intestazione {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 52px;
+  margin-right: 10px;
+}
+
+.logo img {
+  width: 100%;
+}
+
+#levels {
+  padding-right: 35px;
+}
+
+.btn {
+  padding: 5px 20px;
+  margin-left: 35px;
+}
+
+main {
+  height: 80vh;
+  width: 100%;
+
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.risultato {
+  text-align: center;
+  background-color: aquamarine;
+  height: 5vh;
+}
+
+.griglia {
+  width: 72vh;
+  height: 72vh;
+  background-color: rgb(247, 81, 144);
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid white;
+}
+
+.hidden {
+  display: none;
+}
+
+.stopClick {
+  pointer-events: none;
+}
+
+.cella {
+  background-color: aquamarine;
+  width: calc(100% / 10);
+  height: calc(100% / 10);
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cella-medium {
+  background-color: aquamarine;
+  width: calc(100% / 9);
+  height: calc(100% / 9);
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cella-hard {
+  background-color: aquamarine;
+  width: calc(100% / 7);
+  height: calc(100% / 7);
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cellaCliccata {
+  background-color: rgb(67, 230, 203);
+}
+
+.cellaCliccataBomba {
+  background-color: rgb(216, 0, 0);
+}
+
+footer {
+  width: 100%;
+  height: 5vh;
+  background-color: antiquewhite;
+  position: fixed;
+}
+
+.dati {
+  line-height: 50px;
+}
+
+@media only screen and (max-width: 689px) {
+  h1 {
+    font-size: 25px;
+  }
+
+  .btn {
+    margin-left: 0px;
+  }
+
+  .sceltaLivello {
+    text-align: right;
+  }
+
+  #levels {
+    padding-right: 0px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  h1 {
+    font-size: 19px;
+  }
+}
