@@ -64,18 +64,34 @@ h5 {
   width: 100%;
 }
 
-.sceltaLivello {
+/* .sceltaLivello {
   display: flex;
   justify-content: center;
   align-items: center;
+} */
+
+.levels {
+  display: flex;
+}
+
+.select-selected {
+  background-color: #210955;
+  color: #efe9f5;
+  border: 1px solid #efe9f570;
+  border-radius: 10px;
+  font-size: 17px;
+  font-family: inherit;
 }
 
 #levels {
   padding-right: 35px;
 }
 
+.bottoniStartReset {
+  display: flex;
+}
+
 .btn {
-  margin-left: 35px;
   width: 108px;
 }
 
@@ -136,22 +152,28 @@ main {
 
 .cella-medium {
   background-color: #1f004370;
-  width: calc((100% / 9));
-  height: calc(100% / 9);
-  border: 1px solid white;
+  border-radius: 8px;
+  margin: 2px;
+  width: calc((100% / 9) - 4px);
+  height: calc((100% / 9) -4px);
+  border: 1px solid #7e65ebcf;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #c9b3da;
 }
 
 .cella-hard {
   background-color: #1f004370;
-  width: calc(100% / 7);
-  height: calc(100% / 7);
-  border: 1px solid white;
+  border-radius: 8px;
+  margin: 2px;
+  width: calc((100% / 7) - 4px);
+  height: calc((100% / 7) - 4px);
+  border: 1px solid #7e65ebcf;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #c9b3da;
 }
 
 .cellaCliccata {
@@ -188,26 +210,31 @@ footer {
   line-height: 50px;
 }
 
-@media only screen and (max-width: 689px) {
+@media only screen and (max-width: 1024px) {
   h1 {
-    font-size: 25px;
+    font-size: 27px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 20px;
   }
 
-  .btn {
-    margin-left: 0px;
-  }
-
-  .sceltaLivello {
-    text-align: right;
+  .btn,
+  .reset {
+    width: 82px;
   }
 
   #levels {
     padding-right: 0px;
+    margin-right: 10px;
+  }
+
+  .levels {
+    flex-direction: column;
   }
 }
 
 @media only screen and (max-width: 425px) {
-  h1 {
-    font-size: 19px;
-  }
 }
