@@ -150,12 +150,35 @@ for (let i = 1; i <= 49; i++) {
   div.classList.add("cella-hard");
   grigliaTre.append(div);
 
-  // coloro di azzurro la casella cliccata;
+  const punteggio = document.querySelector(".count");
+  let bombaEsplosa;
+
+  // coloro di azzurro o di rosso la casella cliccata;
   div.addEventListener("click", function () {
-    if (this.classList.contains("cellaCliccata")) {
-      this.classList.remove("cellaCliccata");
-    } else {
-      this.classList.add("cellaCliccata");
+    count++;
+    punteggio.innerHTML = count;
+
+    for (let b = 0; b < bombeArray.length; b++) {
+      if (bombeArray.includes(i)) {
+        div.classList.add("cellaCliccataBomba");
+
+        bombaEsplosa = true;
+        console.log("bombaEsplosa", bombaEsplosa);
+      } else {
+        div.classList.add("cellaCliccata");
+        bombaEsplosa = false;
+        console.log("bombaEsplosa", bombaEsplosa);
+      }
+    }
+
+    if (bombaEsplosa === true) {
+      grigliaTre.classList.add("stopClick");
+      messaggio.classList.remove("hidden");
+      vinto.classList.add("hidden");
+    } else if (bombaEsplosa === false && count == 84) {
+      grigliaTre.classList.add("stopClick");
+      messaggio.classList.remove("hidden");
+      perso.classList.add("hidden");
     }
 
     // stampo in console il numero che è stato cliccato.
