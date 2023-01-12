@@ -20,17 +20,17 @@ function generaBombe(min, max) {
   return numeroBombe;
 }
 
-bombeArray = [];
+bombeArrayUno = [];
 
 for (let b = 0; b < 16; b++) {
   let bombe = generaBombe(1, 100);
 
-  while (bombeArray.includes(bombe)) {
+  while (bombeArrayUno.includes(bombe)) {
     bombe = generaBombe(1, 100);
   }
-  bombeArray.push(bombe);
+  bombeArrayUno.push(bombe);
 }
-console.log("BombeArray", bombeArray);
+console.log("BombeArrayUno", bombeArrayUno);
 
 const bottone = document.querySelector(".btn");
 const grigliaUno = document.getElementById("grigliaUno");
@@ -60,8 +60,8 @@ for (let i = 1; i <= 100; i++) {
   div.addEventListener("click", function () {
     count++;
     punteggio.innerHTML = count;
-    for (let b = 0; b < bombeArray.length; b++) {
-      if (bombeArray.includes(i)) {
+    for (let b = 0; b < bombeArrayUno.length; b++) {
+      if (bombeArrayUno.includes(i)) {
         div.classList.add("cellaCliccataBomba");
 
         bombaEsplosa = true;
@@ -91,6 +91,19 @@ for (let i = 1; i <= 100; i++) {
 console.log(
   "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 );
+// creo GRIGLIA 2;
+
+bombeArrayDue = [];
+
+for (let b = 0; b < 16; b++) {
+  let bombe = generaBombe(1, 81);
+
+  while (bombeArrayDue.includes(bombe)) {
+    bombe = generaBombe(1, 81);
+  }
+  bombeArrayDue.push(bombe);
+}
+console.log("BombeArrayDue", bombeArrayDue);
 
 // creo GRIGLIA 2;
 // creo le celle con classe cella all'interno della griglia;
@@ -111,8 +124,8 @@ for (let i = 1; i <= 81; i++) {
     count++;
     punteggio.innerHTML = count;
 
-    for (let b = 0; b < bombeArray.length; b++) {
-      if (bombeArray.includes(i)) {
+    for (let b = 0; b < bombeArrayDue.length; b++) {
+      if (bombeArrayDue.includes(i)) {
         div.classList.add("cellaCliccataBomba");
 
         bombaEsplosa = true;
@@ -139,7 +152,23 @@ for (let i = 1; i <= 81; i++) {
   });
 }
 
+console.log(
+  "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+);
+
 // creo GRIGLIA 3;
+
+bombeArrayTre = [];
+
+for (let b = 0; b < 16; b++) {
+  let bombe = generaBombe(1, 49);
+
+  while (bombeArrayTre.includes(bombe)) {
+    bombe = generaBombe(1, 49);
+  }
+  bombeArrayTre.push(bombe);
+}
+console.log("BombeArrayTre", bombeArrayTre);
 // creo le celle con classe cella all'interno della griglia;
 for (let i = 1; i <= 49; i++) {
   // console.log(i);
@@ -158,8 +187,8 @@ for (let i = 1; i <= 49; i++) {
     count++;
     punteggio.innerHTML = count;
 
-    for (let b = 0; b < bombeArray.length; b++) {
-      if (bombeArray.includes(i)) {
+    for (let b = 0; b < bombeArrayTre.length; b++) {
+      if (bombeArrayTre.includes(i)) {
         div.classList.add("cellaCliccataBomba");
 
         bombaEsplosa = true;
