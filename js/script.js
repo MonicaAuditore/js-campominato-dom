@@ -73,6 +73,9 @@ const grigliaUno = document.getElementById("grigliaUno");
 const grigliaDue = document.getElementById("grigliaDue");
 const grigliaTre = document.getElementById("grigliaTre");
 
+let click = 0;
+// console.log("click", click);
+
 // creo le celle con classe cella all'interno della griglia;
 for (let i = 1; i <= 100; i++) {
   console.log(i);
@@ -83,7 +86,7 @@ for (let i = 1; i <= 100; i++) {
   div.classList.add("cella");
   grigliaUno.append(div);
 
-  const punteggio = document.querySelector(".messaggioPunteggio");
+  const punteggio = document.getElementById("count");
   let bombaEsplosa;
 
   // coloro di azzurro o di rosso la casella cliccata;
@@ -91,6 +94,7 @@ for (let i = 1; i <= 100; i++) {
     for (let b = 0; b < bombeArray.length; b++) {
       if (bombeArray.includes(i)) {
         div.classList.add("cellaCliccataBomba");
+
         bombaEsplosa = true;
         console.log("bombaEsplosa", bombaEsplosa);
       } else {
@@ -101,10 +105,11 @@ for (let i = 1; i <= 100; i++) {
     }
 
     if (bombaEsplosa === true) {
-      punteggio.innerHTML += `<h3>Il tuo punteggio è x</h3>`;
+      punteggio.innerHTML += "a";
       console.log("perso");
+      grigliaUno.classList.add("stopClick");
     } else if (bombaEsplosa === false) {
-      punteggio.innerHTML += `<h3>Il tuo punteggio è y</h3>`;
+      punteggio.innerHTML += "b";
       console.log("vinto");
     }
 

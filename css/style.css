@@ -83,6 +83,10 @@ main {
   display: none;
 }
 
+.stopClick {
+  pointer-events: none;
+}
+
 .cella {
   background-color: aquamarine;
   width: calc(100% / 10);
