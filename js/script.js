@@ -73,12 +73,11 @@ const grigliaUno = document.getElementById("grigliaUno");
 const grigliaDue = document.getElementById("grigliaDue");
 const grigliaTre = document.getElementById("grigliaTre");
 
-let click = 0;
-// console.log("click", click);
+let count = 0;
 
 // creo le celle con classe cella all'interno della griglia;
 for (let i = 1; i <= 100; i++) {
-  console.log(i);
+  // console.log(i);
   let div = document.createElement("div");
 
   // assegno un numero alle celle;
@@ -91,6 +90,8 @@ for (let i = 1; i <= 100; i++) {
 
   // coloro di azzurro o di rosso la casella cliccata;
   div.addEventListener("click", function () {
+    count++;
+    punteggio.innerHTML = count;
     for (let b = 0; b < bombeArray.length; b++) {
       if (bombeArray.includes(i)) {
         div.classList.add("cellaCliccataBomba");
@@ -105,11 +106,11 @@ for (let i = 1; i <= 100; i++) {
     }
 
     if (bombaEsplosa === true) {
-      punteggio.innerHTML += "a";
+      // punteggio.innerHTML += "a";
       console.log("perso");
       grigliaUno.classList.add("stopClick");
     } else if (bombaEsplosa === false) {
-      punteggio.innerHTML += "b";
+      // punteggio.innerHTML += "b";
       console.log("vinto");
     }
 
@@ -125,7 +126,7 @@ console.log(
 // creo GRIGLIA 2;
 // creo le celle con classe cella all'interno della griglia;
 for (let i = 1; i <= 81; i++) {
-  console.log(i);
+  // console.log(i);
   let div = document.createElement("div");
 
   // assegno un numero alle celle;
@@ -149,7 +150,7 @@ for (let i = 1; i <= 81; i++) {
 // creo GRIGLIA 3;
 // creo le celle con classe cella all'interno della griglia;
 for (let i = 1; i <= 49; i++) {
-  console.log(i);
+  // console.log(i);
   let div = document.createElement("div");
 
   // assegno un numero alle celle;
