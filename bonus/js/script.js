@@ -233,3 +233,8 @@ bottone.addEventListener("click", function () {
     grigliaDue.classList.add("hidden");
   }
 });
+
+const reset = document.querySelector(".reset");
+reset.addEventListener("click", function () {
+  location.reload();
+});

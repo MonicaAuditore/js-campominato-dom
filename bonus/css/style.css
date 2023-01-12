@@ -54,6 +54,11 @@ header {
   margin-left: 35px;
 }
 
+.reset {
+  padding: 5px 20px;
+  margin-left: 5px;
+}
+
 main {
   height: 80vh;
   width: 100%;
