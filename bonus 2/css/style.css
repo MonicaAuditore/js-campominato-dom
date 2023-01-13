@@ -4,10 +4,47 @@
   box-sizing: border-box;
 }
 
+html {
+  position: relative;
+}
+
 body {
   width: 100%;
   height: 100vh;
   font-family: "Audiowide", cursive;
+}
+
+.navicella {
+  position: absolute;
+  bottom: -162px;
+  left: 1521px;
+  width: 0px;
+  animation-name: viaggioSpace;
+  animation-duration: 4s;
+}
+
+@keyframes viaggioSpace {
+  0% {
+    bottom: 6px;
+    width: 28px;
+    left: 1521px;
+  }
+  25% {
+    bottom: 168px;
+    width: 173px;
+  }
+  50% {
+    bottom: 418px;
+  }
+  100% {
+    bottom: 498px;
+    width: 0px;
+    left: 1742px;
+  }
+}
+
+.navicella img {
+  width: 100%;
 }
 
 header {
