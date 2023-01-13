@@ -139,7 +139,7 @@ main {
 }
 
 .cella {
-  background-color: #1f004370;
+  background-color: #1f0043cc;
   width: calc((100% / 10) - 4px);
   height: calc((100% / 10) - 4px);
   border: 1px solid #7e65ebcf;
@@ -152,7 +152,7 @@ main {
 }
 
 .cella-medium {
-  background-color: #1f004370;
+  background-color: #1f0043cc;
   border-radius: 8px;
   margin: 2px;
   width: calc((100% / 9) - 4px);
@@ -165,7 +165,7 @@ main {
 }
 
 .cella-hard {
-  background-color: #1f004370;
+  background-color: #1f0043cc;
   border-radius: 8px;
   margin: 2px;
   width: calc((100% / 7) - 4px);
