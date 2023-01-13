@@ -34,12 +34,12 @@ console.log("BombeArrayUno", bombeArrayUno);
 
 const bottone = document.querySelector(".btn");
 
-// suono bottoni start e reset
+// suono bottoni start
 const x = document.getElementById("myAudio");
 function playAudio() {
   x.play();
 }
-// fine suono bottoni start e reset
+// fine suono bottoni start
 
 const grigliaUno = document.getElementById("grigliaUno");
 const grigliaDue = document.getElementById("grigliaDue");
