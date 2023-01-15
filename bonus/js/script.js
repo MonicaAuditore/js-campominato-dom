@@ -59,7 +59,7 @@ for (let i = 1; i <= 100; i++) {
   // coloro di azzurro o di rosso la casella cliccata;
   div.addEventListener("click", function () {
     count++;
-    punteggio.innerHTML = count;
+
     for (let b = 0; b < bombeArrayUno.length; b++) {
       if (bombeArrayUno.includes(i)) {
         div.classList.add("cellaCliccataBomba");
@@ -74,10 +74,13 @@ for (let i = 1; i <= 100; i++) {
     }
 
     if (bombaEsplosa === true) {
+      count = count - 1;
+      punteggio.innerHTML = count;
       grigliaUno.classList.add("stopClick");
       messaggio.classList.remove("hidden");
       vinto.classList.add("hidden");
     } else if (bombaEsplosa === false && count == 84) {
+      punteggio.innerHTML = count;
       grigliaUno.classList.add("stopClick");
       messaggio.classList.remove("hidden");
       perso.classList.add("hidden");
@@ -122,7 +125,6 @@ for (let i = 1; i <= 81; i++) {
   // coloro di azzurro o di rosso la casella cliccata;
   div.addEventListener("click", function () {
     count++;
-    punteggio.innerHTML = count;
 
     for (let b = 0; b < bombeArrayDue.length; b++) {
       if (bombeArrayDue.includes(i)) {
@@ -138,10 +140,13 @@ for (let i = 1; i <= 81; i++) {
     }
 
     if (bombaEsplosa === true) {
+      count = count - 1;
+      punteggio.innerHTML = count;
       grigliaDue.classList.add("stopClick");
       messaggio.classList.remove("hidden");
       vinto.classList.add("hidden");
     } else if (bombaEsplosa === false && count == 65) {
+      punteggio.innerHTML = count;
       grigliaDue.classList.add("stopClick");
       messaggio.classList.remove("hidden");
       perso.classList.add("hidden");
@@ -185,7 +190,6 @@ for (let i = 1; i <= 49; i++) {
   // coloro di azzurro o di rosso la casella cliccata;
   div.addEventListener("click", function () {
     count++;
-    punteggio.innerHTML = count;
 
     for (let b = 0; b < bombeArrayTre.length; b++) {
       if (bombeArrayTre.includes(i)) {
@@ -201,10 +205,13 @@ for (let i = 1; i <= 49; i++) {
     }
 
     if (bombaEsplosa === true) {
+      count = count - 1;
+      punteggio.innerHTML = count;
       grigliaTre.classList.add("stopClick");
       messaggio.classList.remove("hidden");
       vinto.classList.add("hidden");
     } else if (bombaEsplosa === false && count == 33) {
+      punteggio.innerHTML = count;
       grigliaTre.classList.add("stopClick");
       messaggio.classList.remove("hidden");
       perso.classList.add("hidden");
