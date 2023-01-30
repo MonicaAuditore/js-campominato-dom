@@ -7,6 +7,7 @@
 html {
   position: relative;
   background-color: #1f054e;
+  overflow: hidden;
 }
 
 body {
@@ -17,7 +18,7 @@ body {
 .navicella {
   position: absolute;
   bottom: -162px;
-  left: 1521px;
+  left: 800px;
   width: 0px;
   animation-name: viaggioSpace;
   animation-duration: 4s;
@@ -27,7 +28,7 @@ body {
   0% {
     bottom: 6px;
     width: 28px;
-    left: 1521px;
+    left: 800px;
   }
   25% {
     bottom: 168px;
@@ -39,13 +40,13 @@ body {
   }
 
   70% {
-    left: 1600px;
+    left: 1300px;
   }
 
   100% {
     bottom: 600px;
     width: 0px;
-    left: 1742px;
+    left: 1100px;
     opacity: 0;
   }
 }
